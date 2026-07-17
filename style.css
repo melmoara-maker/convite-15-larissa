@@ -52,14 +52,24 @@ button {
     flex-direction: column;
     justify-content: space-between;
 
-    background:
-        linear-gradient(
-            to bottom,
-            rgba(1, 12, 36, 0.28),
-            rgba(1, 12, 36, 0.48)
-        ),
-        url("fundo.jpg") center top / cover no-repeat;
-}
+  background:
+    radial-gradient(
+        circle at 50% 15%,
+        rgba(25, 83, 156, 0.75) 0%,
+        rgba(5, 38, 88, 0.5) 28%,
+        transparent 58%
+    ),
+    radial-gradient(
+        circle at 50% 80%,
+        rgba(11, 67, 139, 0.7) 0%,
+        transparent 48%
+    ),
+    linear-gradient(
+        180deg,
+        #061c45 0%,
+        #03163a 48%,
+        #020c25 100%
+    );
 
 /* Escurece o centro da imagem para o texto ficar mais legível */
 .capa::before {
@@ -69,14 +79,23 @@ button {
     z-index: 0;
     background:
         radial-gradient(
-            ellipse at 50% 38%,
-            rgba(2, 15, 45, 0.88) 0%,
-            rgba(2, 15, 45, 0.74) 35%,
-            rgba(2, 15, 45, 0.12) 70%
+            circle at 18% 20%,
+            rgba(255, 255, 255, 0.08) 0 1px,
+            transparent 2px
+        ),
+        radial-gradient(
+            circle at 78% 32%,
+            rgba(255, 255, 255, 0.1) 0 1px,
+            transparent 2px
+        ),
+        radial-gradient(
+            circle at 42% 65%,
+            rgba(255, 255, 255, 0.08) 0 1px,
+            transparent 2px
         );
+    background-size: 75px 75px, 110px 110px, 145px 145px;
     pointer-events: none;
 }
-
 /* Moldura dourada principal */
 .capa::after {
     content: "";
